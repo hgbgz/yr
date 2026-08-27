@@ -1,3 +1,7 @@
-git add .
-git commit -m "update"
-git push -u origin main
+@echo off 
+set /p msg="commit msg (default: update): " 
+if "%msg%"=="" set "msg=update" 
+git add -A 
+git commit -m "%msg%" 
+git push 
+pause
